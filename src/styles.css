@@ -2,14 +2,22 @@
   --page-padding: 5%;
   --section-max-width: 70rem;
 
-  --primary-color: #070f41;
-  --accent-color: #f2545b;
+  --primary-color: #13183f;
+  --primary-color-light: #666ca3;
+
+  --accent-color: #f74780;
+  --accent-color-light: #ffa7c3;
 
   --header-text-color: var(--primary-color);
   --header-text-color-light: #ffffff;
 
-  --body-text-color: #000000;
+  --body-text-color: #83869a;
   --body-text-color-light: #ffffff;
+
+  --gradient-pink: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+  --gradient-purple: linear-gradient(180deg, #4851ff 0%, #f02aa6 100%);
+
+  --card-shadow: box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
 }
 
 /* ******************* */
