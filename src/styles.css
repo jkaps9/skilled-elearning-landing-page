@@ -1,0 +1,456 @@
+:root {
+  --page-padding: 5%;
+  --section-max-width: 70rem;
+
+  --primary-color: #070f41;
+  --accent-color: #f2545b;
+
+  --header-text-color: var(--primary-color);
+  --header-text-color-light: #ffffff;
+
+  --body-text-color: #000000;
+  --body-text-color-light: #ffffff;
+}
+
+/* ******************* */
+/*        RESETS       */
+/* ******************* */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* ******************* */
+/*      COMPONENTS     */
+/* ******************* */
+
+.button-solid {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--body-text-color-light);
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.button-solid:hover {
+  opacity: 0.9;
+}
+
+/* ******************* */
+/*    GLOBAL STYLING   */
+/* ******************* */
+
+header,
+main,
+footer {
+  .container {
+    max-width: var(--section-max-width);
+    margin: 0 auto;
+  }
+}
+
+header,
+footer,
+section {
+  padding: 0 var(--page-padding);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--header-text-color);
+}
+
+p,
+a {
+  color: var(--body-text-color);
+}
+
+/* ******************* */
+/*       HEADER        */
+/* ******************* */
+header {
+  z-index: 1000;
+  .container {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .ul-wrapper ul {
+    li a {
+      color: var(--body-text-color);
+      font-size: 1rem;
+    }
+  }
+}
+
+/* ******************* */
+/*     MOBILE MENU     */
+/* ******************* */
+/* max-width media query for mobile menu so styling ONLY applies to mobile menu
+   this allows changes to mobile menu styling without impacting bigger screens menu styling
+*/
+@media only screen and (max-width: 1023.5px) {
+  header {
+    .hamburger {
+      width: 1.5rem;
+      height: 1rem;
+      margin-left: auto;
+      background-color: transparent;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .line {
+        width: 100%;
+        height: 2px;
+        background-color: #1a1a1a;
+        border-radius: 2px;
+        transition:
+          transform 0.3s ease,
+          top 0.3s ease;
+        display: block;
+        position: absolute;
+      }
+
+      .line1 {
+        top: 0;
+      }
+
+      .line2 {
+        top: 50%;
+      }
+
+      .line3 {
+        top: 100%;
+      }
+    }
+
+    .ul-wrapper {
+      height: 100vh;
+      background-color: #ffffff;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: auto;
+      z-index: 2;
+      overflow: hidden;
+      transform: scaleX(0);
+      transition:
+        transform 0.4s,
+        opacity 0.3s;
+      transform-origin: top right;
+    }
+
+    nav .ul-wrapper {
+      padding: 2rem;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        overflow: scroll;
+      }
+      ul > li > a {
+        font-size: 1.5rem;
+      }
+    }
+
+    nav.active {
+      .hamburger {
+        .line1 {
+          top: 50%;
+          transform: rotate(45deg);
+        }
+        .line2 {
+          transform: scale(0);
+        }
+        .line3 {
+          top: 50%;
+          transform: rotate(-45deg);
+        }
+      }
+
+      .ul-wrapper {
+        opacity: 1;
+        transform: scaleX(1);
+        transition-delay: 0.2s;
+      }
+    }
+
+    nav::before {
+      /* black blurred overlay */
+      content: "";
+      width: 0%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      display: block;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      z-index: 2;
+      transition:
+        width 0.5s,
+        opacity 0.3s;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+
+    nav.active::before {
+      width: 100%;
+      opacity: 1;
+    }
+
+    .button-solid {
+      display: none;
+    }
+  }
+}
+
+/* ******************* */
+/*    HEADER-DESKTOP   */
+/* ******************* */
+@media only screen and (min-width: 64rem) {
+  .hamburger {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .ul-wrapper ul {
+    display: flex;
+    gap: 2.5rem;
+  }
+}
+
+/* ******************* */
+/*         HERO        */
+/* ******************* */
+
+#hero {
+  text-align: center;
+  padding: 4rem var(--page-padding);
+
+  .container {
+    display: flex;
+    .text {
+      /* justify-self: flex-start; */
+    }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  h1 {
+    /* 32px - 56px */
+    font-size: clamp(2rem, 0.75rem + 5.5vw, 4.5rem);
+    font-weight: bold;
+  }
+
+  p {
+    /* 16px - 24px */
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 1.5rem);
+    line-height: 1.5em;
+    width: 100%;
+    max-width: clamp(45ch, 1rem + 60vw, 66ch);
+  }
+}
+
+/* ******************* */
+/*         CTA         */
+/* ******************* */
+
+#cta {
+  text-align: center;
+  padding: 4rem var(--page-padding);
+  background-color: var(--accent-color);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  h2 {
+    color: var(--header-text-color-light);
+    /* 24px - 48px */
+    font-size: clamp(1.5rem, 0.75rem + 4.5vw, 3rem);
+    margin-bottom: 2rem;
+  }
+
+  p {
+    color: var(--header-text-color-light);
+    /* 16px - 24px */
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 1.5rem);
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  #cta {
+    text-align: start;
+    .container {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      place-items: center;
+    }
+  }
+}
+
+/* ******************* */
+/*       FOOTER        */
+/* ******************* */
+
+footer {
+  padding: 2rem var(--page-padding);
+  background-color: var(--primary-color);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .logo-container {
+    max-width: 50vw;
+  }
+
+  h2 {
+    color: var(--header-text-color-light);
+  }
+
+  p,
+  li,
+  a {
+    color: var(--body-text-color-light);
+  }
+
+  li.header:after {
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-color: var(--accent-color);
+    opacity: 1;
+    position: relative;
+    display: block;
+    margin: 0.25rem auto;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .socials a {
+    width: 1.5rem;
+    height: auto;
+  }
+}
+
+/* TABLET */
+@media only screen and (min-width: 48rem) {
+  footer {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 1fr;
+      justify-items: center;
+      align-items: start;
+    }
+
+    .logo-container {
+      grid-column: 1 / span 2;
+    }
+
+    ul {
+      justify-self: end;
+      margin-right: 5vw;
+    }
+
+    .socials {
+      flex-direction: column;
+      gap: 0.5rem;
+      justify-self: start;
+      margin-left: 5vw;
+    }
+    .socials a {
+      width: 1.5rem;
+    }
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 64rem) {
+  footer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: start;
+    }
+
+    .logo-container {
+      max-width: 33vw;
+    }
+
+    ul {
+      grid-row: span 2;
+    }
+  }
+}
