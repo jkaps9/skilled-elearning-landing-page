@@ -1,5 +1,6 @@
 :root {
   --page-padding: 5%;
+  --page-padding-mobile: 20px;
   --section-max-width: 70rem;
 
   --primary-color: #13183f;
@@ -122,14 +123,14 @@ header {
 
 #hero {
   text-align: start;
-  padding: 4rem var(--page-padding);
+  padding: 4rem var(--page-padding-mobile);
 
   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   h1 {
@@ -144,6 +145,7 @@ header {
     line-height: 1.5em;
     width: 100%;
     max-width: clamp(45ch, 1rem + 60vw, 66ch);
+    margin-bottom: calc(40px - 1.5rem);
   }
 
   a.button-solid {
