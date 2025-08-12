@@ -121,17 +121,14 @@ header {
 /* ******************* */
 
 #hero {
-  text-align: center;
+  text-align: start;
   padding: 4rem var(--page-padding);
 
   .container {
     display: flex;
-    .text {
-      /* justify-self: flex-start; */
-    }
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 2rem;
   }
 
@@ -147,6 +144,10 @@ header {
     line-height: 1.5em;
     width: 100%;
     max-width: clamp(45ch, 1rem + 60vw, 66ch);
+  }
+
+  a.button-solid {
+    background: var(--gradient-pink);
   }
 }
 
