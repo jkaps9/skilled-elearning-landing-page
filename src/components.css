@@ -5,7 +5,6 @@
 #card-grid {
   padding: 4rem var(--page-padding) 5rem;
   background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
-  --max-card-width: clamp(15rem, 40vw, 20rem);
 
   h2 {
     margin-bottom: 2rem;
@@ -13,7 +12,7 @@
 
   .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--max-card-width), 1fr));
+    grid-template-columns: 1fr;
     justify-items: center;
     gap: 2rem;
     margin: 0 auto;
@@ -64,6 +63,10 @@
   #card-grid {
     padding: 4rem calc(var(--page-padding) + 1.76px) 9rem;
 
+    .card-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .container {
       padding-top: 1.75rem;
     }
@@ -89,6 +92,7 @@
 @media only screen and (min-width: 64rem) {
   #card-grid {
     .card-container {
+      grid-template-columns: repeat(3, 1fr);
       column-gap: 2rem;
     }
     .card:nth-last-of-type(3) {
