@@ -234,6 +234,7 @@ header {
 @media only screen and (min-width: 48rem) {
   header {
     padding: 0 calc(var(--page-padding) + 1.76px);
+    z-index:1;
     .container {
       padding: 1.5rem 0;
     }
@@ -287,15 +288,11 @@ header {
 }
 
 @media only screen and (min-width: 48rem) and (max-width: 1023.5px) {
-  #hero {
-    .container {
-      position: relative;
-    }
-
+  #hero {	  
     picture {
-      position: absolute;
-      bottom: -5rem;
-      right: -13rem;
+	    position: fixed;
+     top: 0; 
+      right: calc((var(--page-padding) + 1.76px) * -2.75);
     }
   }
 }
