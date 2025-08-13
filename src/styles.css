@@ -287,6 +287,7 @@ footer {
 /* TABLET */
 @media only screen and (min-width: 48rem) {
   footer {
+    padding: 1.5rem calc(var(--page-padding) + 1.76px);
   }
 }
 
