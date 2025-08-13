@@ -30,20 +30,52 @@
             <a class="button-solid textpreset7" href="#">Get Started</a>
           </div>
           <picture>
+            <!-- Mobile Image -->
             <source
               media="(width < 768px)"
               srcset="assets/images/image-hero-mobile.webp"
+              type="image/webp"
+              width="327"
+              height="301"
             />
+            <source
+              media="(width < 768px)"
+              srcset="assets/images/image-hero-mobile.png"
+              type="image/png"
+              width="327"
+              height="301"
+            />
+
+            <!-- Tablet Image -->
             <source
               media="(width < 1024px)"
               srcset="assets/images/image-hero-tablet.webp"
+              type="image/webp"
             />
+            <source
+              media="(width < 1024px)"
+              srcset="assets/images/image-hero-tablet.png"
+              type="image/png"
+            />
+
+            <!-- Desktop Image -->
             <source
               media="(width >= 1024px)"
               srcset="assets/images/image-hero-desktop.webp"
+              type="image/webp"
+            />
+            <source
+              media="(width >= 1024px)"
+              srcset="assets/images/image-hero-desktop.png"
+              type="image/png"
             />
             <!-- Fallback -->
-            <img src="assets/images/image-hero-mobile.png" alt="hero" />
+            <img
+              src="assets/images/image-hero-mobile.png"
+              alt="hero"
+              width="327"
+              height="301"
+            />
           </picture>
         </div>
       </section>

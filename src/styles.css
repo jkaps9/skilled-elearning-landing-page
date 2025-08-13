@@ -41,13 +41,6 @@ li {
   list-style: none;
 }
 
-img,
-picture,
-video {
-  max-width: 100%;
-  width: 100%;
-}
-
 /* ******************* */
 /*      COMPONENTS     */
 /* ******************* */
@@ -108,6 +101,10 @@ a {
   display: block;
   height: 1.25rem;
   width: 79.29px;
+
+  img {
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 64rem) {
