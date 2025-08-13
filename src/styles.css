@@ -214,47 +214,6 @@ footer {
   .logo-container {
     max-width: 50vw;
   }
-
-  h2 {
-    color: var(--header-text-color-light);
-  }
-
-  p,
-  li,
-  a {
-    color: var(--body-text-color-light);
-  }
-
-  li.header:after {
-    content: "";
-    width: 90%;
-    height: 1px;
-    background-color: var(--accent-color);
-    opacity: 1;
-    position: relative;
-    display: block;
-    margin: 0.25rem auto;
-  }
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    font-size: 1rem;
-  }
-
-  .socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .socials a {
-    width: 1.5rem;
-    height: auto;
-  }
 }
 
 /* TABLET */
@@ -271,21 +230,6 @@ footer {
     .logo-container {
       grid-column: 1 / span 2;
     }
-
-    ul {
-      justify-self: end;
-      margin-right: 5vw;
-    }
-
-    .socials {
-      flex-direction: column;
-      gap: 0.5rem;
-      justify-self: start;
-      margin-left: 5vw;
-    }
-    .socials a {
-      width: 1.5rem;
-    }
   }
 }
 
@@ -298,14 +242,6 @@ footer {
       display: grid;
       grid-template-columns: 1fr 1fr;
       justify-items: start;
-    }
-
-    .logo-container {
-      max-width: 33vw;
-    }
-
-    ul {
-      grid-row: span 2;
     }
   }
 }
