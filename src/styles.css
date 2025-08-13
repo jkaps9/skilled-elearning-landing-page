@@ -1,6 +1,5 @@
 :root {
-  --page-padding: 5%;
-  --page-padding-mobile: 20px;
+  --page-padding-: clamp(1.25rem, 5.5vw, 5rem);
   --section-max-width: 70rem;
 
   --primary-color: #13183f;
@@ -83,7 +82,7 @@ footer {
 header,
 footer,
 section {
-  padding: 0 var(--page-padding);
+  padding: 0 var(mobile);
 }
 
 h1,
@@ -229,7 +228,7 @@ header {
 
 #hero {
   text-align: start;
-  padding: 4rem var(--page-padding-mobile);
+  padding: 4rem var(mobile);
 
   .container {
     display: flex;
@@ -257,7 +256,7 @@ header {
 /* ******************* */
 
 footer {
-  padding: 1.5rem var(--page-padding);
+  padding: 1.5rem var(mobile);
   background-color: var(--primary-color);
 
   .container {

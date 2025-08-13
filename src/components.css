@@ -3,7 +3,7 @@
 /* ******************* */
 
 #card-grid {
-  padding: 4rem var(--page-padding-mobile) 5rem;
+  padding: 4rem var(--page-padding) 5rem;
   background: linear-gradient(180deg, #ffffff 0%, #f0f1ff 100%);
   --max-card-width: clamp(15rem, 40vw, 20rem);
 
