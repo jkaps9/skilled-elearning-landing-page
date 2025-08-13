@@ -9,7 +9,6 @@
 
   h2 {
     margin-bottom: 2rem;
-    font-size: 2rem;
   }
 
   .card-container {
@@ -43,7 +42,7 @@
   .gradient-bg {
     background: var(--gradient-pink);
     padding: 2rem;
-    h3 {
+    p {
       color: var(--body-text-color-light);
     }
   }
