@@ -106,13 +106,13 @@ a {
 
 .logo-container a {
   display: block;
-  height: 20px;
+  height: 1.25rem;
   width: 79.29px;
 }
 
 @media only screen and (min-width: 64rem) {
   .logo-container a {
-    height: 28px;
+    height: 1.75rem;
     width: 111px;
   }
 }
