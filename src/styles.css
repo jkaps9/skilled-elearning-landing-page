@@ -200,22 +200,22 @@ a {
 }
 
 @media only screen and (min-width: 64rem) {
-  .desktop__textpreset1 {
+  .textpreset1 {
     font-size: 56px;
   }
 
-  .desktop__textpreset2 {
+  .textpreset2 {
     font-size: 40px;
   }
 
-  .desktop__textpreset3 {
+  .textpreset3 {
     font-size: 32px;
   }
-  .desktop__textpreset4 {
+  .textpreset4 {
     font-size: 24px;
   }
 
-  .desktop__textpreset6 {
+  .textpreset6 {
     font-size: 16px;
     line-height: 150%;
   }
