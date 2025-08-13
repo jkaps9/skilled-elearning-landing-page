@@ -232,18 +232,11 @@ header {
     justify-content: center;
     align-items: flex-start;
     gap: 1.5rem;
-  }
 
-  h1 {
-    /* 32px - 56px */
-    font-size: clamp(2rem, 0.75rem + 5.5vw, 4.5rem);
-    font-weight: bold;
+    text-align: center;
   }
 
   p {
-    /* 16px - 24px */
-    font-size: clamp(1rem, 0.75rem + 1.5vw, 1.5rem);
-    line-height: 1.5em;
     width: 100%;
     max-width: clamp(45ch, 1rem + 60vw, 66ch);
     margin-bottom: calc(40px - 1.5rem);
@@ -251,6 +244,10 @@ header {
 
   a.button-solid {
     background: var(--gradient-pink);
+  }
+
+  img {
+    width: auto;
   }
 }
 
