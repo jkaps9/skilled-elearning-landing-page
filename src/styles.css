@@ -282,6 +282,13 @@ header {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
+      position: relative;
+    }
+
+    picture {
+      position: absolute;
+      bottom: -5rem;
+      right: -13rem;
     }
   }
 }
