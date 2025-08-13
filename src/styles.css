@@ -241,8 +241,6 @@ header {
     justify-content: center;
     align-items: flex-start;
     gap: 1.5rem;
-
-    text-align: center;
   }
 
   p {
@@ -256,6 +254,13 @@ header {
   }
 }
 
+@media only screen and (min-width: 48rem) {
+  #hero {
+    .container {
+      flex-direction: row;
+    }
+  }
+}
 /* ******************* */
 /*       FOOTER        */
 /* ******************* */
