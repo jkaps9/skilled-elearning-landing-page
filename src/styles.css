@@ -235,7 +235,8 @@ header {
   text-align: start;
   padding: 4rem var(--page-padding);
 
-  .container {
+  .container,
+  .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
