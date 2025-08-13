@@ -100,6 +100,11 @@ a {
   color: var(--body-text-color);
 }
 
+.logo-container a {
+  display: block;
+  height: 20px;
+  width: 79.29px;
+}
 /* ******************* */
 /*         FONTS       */
 /* ******************* */
@@ -263,12 +268,6 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .logo-container a {
-    display: block;
-    height: 20px;
-    width: 79.29px;
   }
 
   a.button-solid {
