@@ -109,6 +109,13 @@ a {
   height: 20px;
   width: 79.29px;
 }
+
+@media only screen and (min-width: 64rem) {
+  .logo-container a {
+    height: 28px;
+    width: 111px;
+  }
+}
 /* ******************* */
 /*         FONTS       */
 /* ******************* */
@@ -330,5 +337,7 @@ footer {
 /* DESKTOP */
 @media only screen and (min-width: 64rem) {
   footer {
+    padding-left: calc(var(--page-padding) + 0.69px);
+    padding-right: calc(var(--page-padding) + 0.69px);
   }
 }
