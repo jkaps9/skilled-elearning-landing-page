@@ -233,7 +233,7 @@ header {
 
 #hero {
   text-align: start;
-  padding: 4rem var(--page-padding);
+  padding: 4rem calc(var(--page-padding) - 0.625px);
 
   .container,
   .content {
@@ -257,8 +257,10 @@ header {
 
 @media only screen and (min-width: 48rem) {
   #hero {
+    padding: 4rem calc(var(--page-padding) + 1.76px);
     .container {
-      flex-direction: row;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
