@@ -250,10 +250,6 @@ header {
   a.button-solid {
     background: var(--gradient-pink);
   }
-
-  img {
-    width: auto;
-  }
 }
 
 /* ******************* */
