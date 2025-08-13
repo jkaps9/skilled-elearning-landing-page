@@ -292,7 +292,7 @@ header {
     picture {
 	    position: fixed;
      top: 0; 
-      right: calc((var(--page-padding) + 1.76px) * -2.75);
+     right: -15%;
     }
   }
 }
