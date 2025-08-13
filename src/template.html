@@ -30,6 +30,18 @@
             <a class="button-solid textpreset7" href="#">Get Started</a>
           </div>
           <picture>
+            <source
+              media="(width < 768px)"
+              srcset="assets/images/image-hero-mobile.webp"
+            />
+            <source
+              media="(width < 1024px)"
+              srcset="assets/images/image-hero-tablet.webp"
+            />
+            <source
+              media="(width >= 1024px)"
+              srcset="assets/images/image-hero-desktop.webp"
+            />
             <!-- Fallback -->
             <img src="assets/images/image-hero-mobile.png" alt="hero" />
           </picture>
