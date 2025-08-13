@@ -270,15 +270,29 @@ header {
   }
 }
 
+/* Tablet */
 @media only screen and (min-width: 48rem) {
   #hero {
     padding: 4rem calc(var(--page-padding) + 1.76px);
     .container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      align-items: center;
     }
   }
 }
+
+/* Desktop */
+@media only screen and (min-width: 64rem) {
+  #hero {
+    padding-left: calc(var(--page-padding) + 0.8px);
+    padding-right: calc(var(--page-padding) + 0.8px);
+    .container {
+      gap: 2rem;
+    }
+  }
+}
+
 /* ******************* */
 /*       FOOTER        */
 /* ******************* */
