@@ -290,6 +290,13 @@ header {
     .container {
       gap: 2rem;
     }
+
+    h1 {
+      max-width: 15ch;
+    }
+    p {
+      max-width: 35ch;
+    }
   }
 }
 
