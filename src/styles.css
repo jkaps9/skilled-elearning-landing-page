@@ -70,15 +70,22 @@ li {
 
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header,
 main,
 footer {
+	flex: 0 0 auto;
   .container {
     max-width: var(--section-max-width);
     margin: 0 auto;
   }
+}
+
+main {
+	flex-grow:1;
 }
 
 header,
