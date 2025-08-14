@@ -273,6 +273,11 @@ header {
   a.button-solid {
     background: var(--gradient-pink);
   }
+
+  picture,
+  img {
+    width: 100%;
+  }
 }
 
 /* Tablet */
