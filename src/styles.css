@@ -328,9 +328,6 @@ header {
 
     .image-container {
       position: relative;
-      margin-top: -250px;
-      margin-right: -450px;
-      z-index: 1;
     }
   }
 }
