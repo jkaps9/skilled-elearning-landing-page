@@ -274,9 +274,14 @@ header {
     background: var(--gradient-pink);
   }
 
+  .image-container {
+    margin: 0 auto;
+  }
+
   picture,
   img {
     width: 100%;
+    height: auto;
   }
 }
 
@@ -288,6 +293,21 @@ header {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
+      height: 25rem;
+      position: relative;
+    }
+
+    .image-container {
+      position: relative;
+      margin-top: -165px;
+      margin-right: -200px;
+    }
+
+    picture,
+    img {
+      width: 100%;
+      height: auto;
+      max-width: none;
     }
   }
 }
@@ -304,10 +324,6 @@ header {
       height: 35rem;
     }
 
-    .content {
-      z-index: 2;
-    }
-
     p {
       max-width: 35ch;
     }
@@ -317,13 +333,6 @@ header {
       margin-top: -250px;
       margin-right: -450px;
       z-index: 1;
-    }
-
-    picture,
-    img {
-      width: 100%;
-      height: auto;
-      max-width: none;
     }
   }
 }
