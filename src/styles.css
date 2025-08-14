@@ -31,7 +31,6 @@
 
 body {
   overflow-x: hidden;
-  min-height: 100vh;
 }
 
 a {
@@ -68,6 +67,10 @@ li {
 /* ******************* */
 /*    GLOBAL STYLING   */
 /* ******************* */
+
+body {
+  min-height: 100vh;
+}
 
 header,
 main,
