@@ -328,7 +328,9 @@ header {
 
     .image-container {
       position: relative;
-    }
+    left: 140px;
+            transform: translateY(-200px);
+    }                                                    
   }
 }
 
