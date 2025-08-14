@@ -233,6 +233,7 @@ header {
 
 @media only screen and (min-width: 48rem) {
   header {
+	  overflow: hidden;
     padding: 0 calc(var(--page-padding) + 1.76px);
     z-index: 1;
     .container {
@@ -288,7 +289,7 @@ header {
 /* Tablet */
 @media only screen and (min-width: 48rem) {
   #hero {
-    padding: 4rem calc(var(--page-padding) + 1.76px);
+    padding: 0 calc(var(--page-padding) + 1.76px) 4rem;
     .container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -299,15 +300,12 @@ header {
 
     .image-container {
       position: relative;
-      margin-top: -165px;
-      margin-right: -200px;
+     left: 80px;
+            transform: translateY(-100px); 
     }
 
-    picture,
     img {
-      width: 100%;
-      height: auto;
-      max-width: none;
+      width: 140%;
     }
   }
 }
