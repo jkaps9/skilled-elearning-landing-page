@@ -292,27 +292,38 @@ header {
   }
 }
 
-@media only screen and (min-width: 48rem) and (max-width: 1023.5px) {
-  #hero {
-    picture {
-      position: fixed;
-      top: 0;
-      right: -20%;
-    }
-  }
-}
-
 /* Desktop */
 @media only screen and (min-width: 64rem) {
   #hero {
     padding-left: calc(var(--page-padding) + 0.8px);
     padding-right: calc(var(--page-padding) + 0.8px);
+
     .container {
+      position: relative;
       gap: 2rem;
+      height: 35rem;
+    }
+
+    .content {
+      z-index: 2;
     }
 
     p {
       max-width: 35ch;
+    }
+
+    .image-container {
+      position: relative;
+      margin-top: -250px;
+      margin-right: -450px;
+      z-index: 1;
+    }
+
+    picture,
+    img {
+      width: 100%;
+      height: auto;
+      max-width: none;
     }
   }
 }
